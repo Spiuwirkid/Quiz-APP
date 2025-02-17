@@ -1,6 +1,6 @@
 # Quiz App
 
-![Quiz App Screenshot](https://i.ibb.co/VqXNQJB/quiz-app-screenshot.png)
+![Quiz App Screenshot](https://i.ibb.co.com/Fk2Nb2GQ/Screenshot-2025-02-17-155740.png)
 
 Aplikasi kuis interaktif yang dibuat dengan React dan TypeScript, menawarkan pengalaman belajar yang menarik dengan desain modern dan animasi yang smooth.
 
