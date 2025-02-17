@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, 15px) rotate(5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.shapes-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Square */
+.shape-square {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.1);
+  animation: floating 8s infinite ease-in-out;
+  backdrop-filter: blur(2px);
+}
+
+.shape-square:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.shape-square:nth-child(2) {
+  top: 80%;
+  left: 85%;
+  animation-delay: 2s;
+}
+.shape-square:nth-child(3) {
+  top: 60%;
+  left: 15%;
+  animation-delay: 4s;
+}
+
+/* Triangle */
+.shape-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid rgba(59, 130, 246, 0.3);
+  animation: floating 10s infinite ease-in-out;
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.2));
+}
+
+.shape-triangle:nth-child(4) {
+  top: 20%;
+  left: 70%;
+  animation-delay: 1s;
+}
+.shape-triangle:nth-child(5) {
+  top: 50%;
+  left: 30%;
+  animation-delay: 3s;
+}
+.shape-triangle:nth-child(6) {
+  top: 75%;
+  left: 65%;
+  animation-delay: 5s;
+}
+
+/* Circle */
+.shape-circle {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 2px solid rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  animation: floating 12s infinite ease-in-out;
+  backdrop-filter: blur(2px);
+}
+
+.shape-circle:nth-child(7) {
+  top: 15%;
+  left: 45%;
+  animation-delay: 0s;
+}
+.shape-circle:nth-child(8) {
+  top: 40%;
+  left: 80%;
+  animation-delay: 2s;
+}
+.shape-circle:nth-child(9) {
+  top: 70%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* Hexagon */
+.shape-hexagon {
+  position: absolute;
+  width: 45px;
+  height: 26px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 2px solid rgba(59, 130, 246, 0.4);
+  position: relative;
+  animation: floating 9s infinite ease-in-out;
+  backdrop-filter: blur(2px);
+}
+
+.shape-hexagon:before,
+.shape-hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 22.5px solid transparent;
+  border-right: 22.5px solid transparent;
+  left: -2px;
+}
+
+.shape-hexagon:before {
+  bottom: 100%;
+  border-bottom: 13px solid rgba(59, 130, 246, 0.4);
+}
+
+.shape-hexagon:after {
+  top: 100%;
+  border-top: 13px solid rgba(59, 130, 246, 0.4);
+}
+
+.shape-hexagon:nth-child(10) {
+  top: 25%;
+  left: 25%;
+  animation-delay: 1s;
+}
+.shape-hexagon:nth-child(11) {
+  top: 65%;
+  left: 45%;
+  animation-delay: 3s;
+}
+.shape-hexagon:nth-child(12) {
+  top: 35%;
+  left: 75%;
+  animation-delay: 5s;
+}
